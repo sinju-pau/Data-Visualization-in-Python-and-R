@@ -7,7 +7,7 @@ Plenty of enterprise companies use combinations of automated data science, machi
 Dataset courtesy : Aurielle Perlmann @  <a href="https://data.world/">data.world</a>
 
 
-The task here with the dataset EnterpriseAI is to predict the Total Funding as a function of other concerned variables Year funded, Twitter Followers, Employees, Location, State etc. Several regression algorithms has been used here to compare the errors and accuracy involved. The analysis is done using R as well as Python platforms.
+The task here with the dataset EnterpriseAI is to predict the Total Funding as a function of other concerned variables Year funded, Twitter Followers, Employees, Location, State etc. Several regression algorithms has been used here to compare the accuracy and errors involved. The analysis is done using R as well as Python platforms.
 
 ## Analysis using R
 
@@ -16,11 +16,15 @@ Step :1 Install and load required libraries in R
 
 #TO PREDICT TOTAL FUNDING AS A FUNCTON OF OTHER VARIABLES
 #Install and Load required libraries
+install.packages("readr")
+install.packages("Amelia")
+install.packages("caTools")
 library(readr)
 library(Amelia)
 library(caTools)
 
 ```
+
 
 
 
