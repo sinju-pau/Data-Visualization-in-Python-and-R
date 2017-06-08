@@ -9,21 +9,29 @@ Dataset courtesy : Aurielle Perlmann @  <a href="https://data.world/">data.world
 
 The task here with the dataset EnterpriseAI is to predict the Total Funding as a function of other concerned variables Year funded, Twitter Followers, Employees, Location, State etc. Several regression algorithms has been used here to compare the accuracy and errors involved. The analysis is done using R as well as Python platforms.
 
+
+Dataset courtesy : Aurielle Perlmann @  <a href="https://data.world/">data.world</a>
+
+
 ## Analysis using R
 
 Step :1 Install and load required libraries in R
 ```R
-
-#TO PREDICT TOTAL FUNDING AS A FUNCTON OF OTHER VARIABLES
-#Install and Load required libraries
 install.packages("readr")
 install.packages("Amelia")
 install.packages("caTools")
 library(readr)
 library(Amelia)
 library(caTools)
-
 ```
+Step :2 Read and view the dataset
+```R
+Step :2 Read and view the dataset
+EnterpriseAI <- read_csv("~/Documents/R/EnterpriseAI.csv")
+View(EnterpriseAI)
+str(EnterpriseAI)
+```
+
 
 
 
