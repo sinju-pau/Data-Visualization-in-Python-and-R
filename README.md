@@ -53,13 +53,10 @@ The dataset contains missing values (NA's) , unknowns and categorical data. The 
 EnterpriseAI[EnterpriseAI == ""] <- NA
 EnterpriseAI[EnterpriseAI == "Unknown"] <- NA
 ```
-Further
+A view of data using ```   missmap() ``` shows that there are NA's in Year Founded, Twitter Followers, Employees and State. Lets now create a new variable Years_Active, giving active number of years and replace NA's with the mean value.
 ```R
 #Viewing NA's in the dataset
 missmap(EnterpriseAI,main = "Missing values in training data")
-```
-A view of data using ```   missmap() ``` shows that there are NA's in Year Founded, Twitter Followers, Employees and State. Lets now create a new variable Years_Active, giving active number of years and replace NA's with the mean value.
-```R
 #Creating variable Years_Active and removing NA's
 CurrentYear <- rep(2017, nrow(EnterpriseAI))
 EnterpriseAI$Years_Active = (CurrentYear - EnterpriseAI$`Year Founded`)
