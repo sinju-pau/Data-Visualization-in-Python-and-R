@@ -87,7 +87,7 @@ Replace NA's in State by 'U'
 #Removing NA's in State variable
 EnterpriseAI$State[is.na(EnterpriseAI$State)] <- 'U'
 ```
-Let us now encode the categorical variables
+Let us now encode the categorical variables. For Exit Status
 ```R
 #Creating factors for Exit Status
 EnterpriseAI$`Exit Status`<- factor(EnterpriseAI$`Exit Status`)
@@ -99,8 +99,10 @@ y <- c("Barcelona","Berkshire","Catalunya","HaMerkaz","Ile-de-France","Ontario",
 #Creating %in% for character matching
 "%in%" <- function(x, table) match(x, table, nomatch = 0) > 0
 
-EnterpriseAI$State =  ifelse((EnterpriseAI$State %in% y),'Non_US','US')
+EnterpriseAI$State <-  ifelse((EnterpriseAI$State %in% y),'Non_US','US')
+EnterpriseAI$State <- factor(EnterpriseAI$State)
 ```
+
 
 
 
