@@ -161,6 +161,7 @@ For the model , we obtain :
 testMSE <- 0.738789
 cv_Error <- 0.1340996
 ```
+The results are good enough for the model!.
 We now repeat Steps 3 & 4 using other regression methods to see if they can make a better model.
 
 
