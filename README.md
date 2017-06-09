@@ -47,13 +47,26 @@ The varaibles considered for anlaysis are Total Funding, Year Founded, Exit Stat
 
 ### Step :3 Data Preprocessing
 
-The dataset contains missing values , unknowns and categorical data. The missing values and unknowns be replaced with appropriate values and categorical data to be encoded.
+The dataset contains missing values (NA's) , unknowns and categorical data. The missing values and unknowns be replaced with appropriate values and categorical data to be encoded.
 ```R
 #replacing blanks and 'Unknown's by NA
 EnterpriseAI[EnterpriseAI == ""] <- NA
 EnterpriseAI[EnterpriseAI == "Unknown"] <- NA
 ```
-
+Further
+```R
+#Viewing NA's in the dataset
+missmap(EnterpriseAI,main = "Missing values in training data")
+```
+A view of data using ```   missmap() ``` shows that there are NA's in Year Founded, Twitter Followers, Employees and State. Lets now create a new variable Years_Active, giving active number of years and replace NA's with the mean value.
+```R
+#Creating variable Years_Active and removing NA's
+CurrentYear <- rep(2017, nrow(EnterpriseAI))
+EnterpriseAI$Years_Active = (CurrentYear - EnterpriseAI$`Year Founded`)
+EnterpriseAI$Years_Active = ifelse(is.na(EnterpriseAI$Years_Active),
+                            ave(EnterpriseAI$Years_Active, FUN = function(x) mean(x, na.rm = TRUE)),
+                            EnterpriseAI$Years_Active)
+```
 
 
 
