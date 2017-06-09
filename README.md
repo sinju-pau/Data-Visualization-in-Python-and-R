@@ -106,10 +106,10 @@ EnterpriseAI$State <- factor(EnterpriseAI$State)
 ``` missmap()``` can now be used to make sure all NA's are removed. We now scale the numerical variables in the dataset
 ```R
 #Scaling variables in dataset
-EnterpriseAI$`Total Funding` = scale(EnterpriseAI$`Total Funding`)
-EnterpriseAI$Years_Active = scale(EnterpriseAIt$Years_Active)
-EnterpriseAI$`Twitter Followers` = scale(EnterpriseAI$`Twitter Followers`)
-EnterpriseAI$Employees = scale(EnterpriseAI$Employees)
+EnterpriseAI$`Total Funding` <- scale(EnterpriseAI$`Total Funding`)
+EnterpriseAI$Years_Active <- scale(EnterpriseAIt$Years_Active)
+EnterpriseAI$`Twitter Followers` <- scale(EnterpriseAI$`Twitter Followers`)
+EnterpriseAI$Employees <- scale(EnterpriseAI$Employees)
 ```
 
 
