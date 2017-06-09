@@ -147,7 +147,7 @@ summary(regressor)
 
 ```y_pred``` contains the vector of predictions for the test set. 
 
-### Step :4 Testing (Multiple Linear Regression)
+### Step :4 Validation (Multiple Linear Regression)
 We now check for the accuracy of predictions made by the Linear Regressor. Test set Mean Squared Error(MSE) and Cross-validation error are to be evaluated.
 ```R
 #To determine the parameter test set MSE(Mean Squared Error) for the final model
