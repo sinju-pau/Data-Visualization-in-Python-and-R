@@ -13,7 +13,7 @@ Dataset courtesy : Aurielle Perlmann @  <a href="https://data.world/">data.world
 
 ## Analysis using R
 
-Step :1 Install and load required libraries in R
+### Step :1 Install and load required libraries in R
 ```R
 install.packages("readr")
 install.packages("Amelia")
@@ -22,9 +22,8 @@ library(readr)
 library(Amelia)
 library(caTools)
 ```
-Step :2 Read and view the dataset
+### Step :2 Read and view the dataset
 ```R
-Step :2 Read and view the dataset
 EnterpriseAI <- read_csv("EnterpriseAI.csv")
 View(EnterpriseAI)
 str(EnterpriseAI)
