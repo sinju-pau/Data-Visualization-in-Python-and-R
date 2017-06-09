@@ -87,10 +87,11 @@ Replace NA's in State by 'U'
 #Removing NA's in State variable
 EnterpriseAI$State[is.na(EnterpriseAI$State)] <- 'U'
 ```
-Let us now encode the categorical variables. For Exit Status
+Let us now encode the categorical variables. For Exit Status and Category
 ```R
-#Creating factors for Exit Status
+#Creating factors for Exit Status and Category
 EnterpriseAI$`Exit Status`<- factor(EnterpriseAI$`Exit Status`)
+EnterpriseAI$Category <- factor(EnterpriseAI$Category)
 ```
 For the State variable, categorize them into US and Non_US. By inspecting the column,
 ```R
@@ -99,8 +100,16 @@ y <- c("Barcelona","Berkshire","Catalunya","HaMerkaz","Ile-de-France","Ontario",
 #Creating %in% for character matching
 "%in%" <- function(x, table) match(x, table, nomatch = 0) > 0
 
-EnterpriseAI$State <-  ifelse((EnterpriseAI$State %in% y),'Non_US','US')
+EnterpriseAI$State <- ifelse((EnterpriseAI$State %in% y),'Non_US','US')
 EnterpriseAI$State <- factor(EnterpriseAI$State)
+```
+``` missmap()``` can now be used to make sure all NA's are removed. We now scale the numerical variables in the dataset
+```R
+#Scaling variables in dataset
+EnterpriseAI$`Total Funding` = scale(EnterpriseAI$`Total Funding`)
+EnterpriseAI$Years_Active = scale(EnterpriseAIt$Years_Active)
+EnterpriseAI$`Twitter Followers` = scale(EnterpriseAI$`Twitter Followers`)
+EnterpriseAI$Employees = scale(EnterpriseAI$Employees)
 ```
 
 
