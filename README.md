@@ -60,25 +60,25 @@ Let us now create a new variable Years_Active, giving active number of years and
 missmap(EnterpriseAI,main = "Missing values in training data")
 #Creating variable Years_Active and removing NA's
 CurrentYear <- rep(2017, nrow(EnterpriseAI))
-EnterpriseAI$Years_Active = (CurrentYear - EnterpriseAI$`Year Founded`)
-EnterpriseAI$Years_Active = ifelse(is.na(EnterpriseAI$Years_Active),
-                            ave(EnterpriseAI$Years_Active, FUN = function(x) mean(x, na.rm = TRUE)),
-                            EnterpriseAI$Years_Active)
+EnterpriseAI$Years_Active <- (CurrentYear - EnterpriseAI$`Year Founded`)
+EnterpriseAI$Years_Active <- ifelse(is.na(EnterpriseAI$Years_Active),
+                             ave(EnterpriseAI$Years_Active, FUN = function(x) mean(x, na.rm = TRUE)),
+                             EnterpriseAI$Years_Active)
 ```
 Do the same with Twitter Followers variable
 ```R
 #Removing NA's in Twitter Followers variable
-EnterpriseAI$`Twitter Followers` = ifelse(is.na(EnterpriseAI$`Twitter Followers`),
-                                   ave(EnterpriseAI$`Twitter Followers`, FUN = function(x) mean(x, na.rm = TRUE)),
-                                   EnterpriseAI$`Twitter Followers`)
+EnterpriseAI$`Twitter Followers` <- ifelse(is.na(EnterpriseAI$`Twitter Followers`),
+                                    ave(EnterpriseAI$`Twitter Followers`, FUN = function(x) mean(x, na.rm = TRUE)),
+                                    EnterpriseAI$`Twitter Followers`)
 ```
 Replace range values in Employees variable by averages and converting to integer
 ```R
 #Replacing range values by averages and converting to integer
-EnterpriseAI$Employees[grep('-', EnterpriseAI$Employees)] = c(ave(1,10),ave(11,50),ave(51,200),ave(1,10),ave(51,200))
-EnterpriseAI$Employees = as.integer(EnterpriseAI$Employees)
+EnterpriseAI$Employees[grep('-', EnterpriseAI$Employees)] <- c(ave(1,10),ave(11,50),ave(51,200),ave(1,10),ave(51,200))
+EnterpriseAI$Employees <- as.integer(EnterpriseAI$Employees)
 #Removing NA's in Employees variable
-EnterpriseAI$Employees = ifelse(is.na(EnterpriseAI$Employees),
+EnterpriseAI$Employees <- ifelse(is.na(EnterpriseAI$Employees),
                                           ave(EnterpriseAI$Employees, FUN = function(x) mean(x, na.rm = TRUE)),
                                           EnterpriseAI$Employees)
 ```       
@@ -86,6 +86,20 @@ Replace NA's in State by 'U'
 ```R
 #Removing NA's in State variable
 EnterpriseAI$State[is.na(EnterpriseAI$State)] <- 'U'
+```
+Let us now encode the categorical variables
+```R
+#Creating factors for Exit Status
+EnterpriseAI$`Exit Status`<- factor(EnterpriseAI$`Exit Status`)
+```
+For the State variable, categorize them into US and Non_US. By inspecting the column,
+```R
+#Picking Non_US states by inspection 
+y <- c("Barcelona","Berkshire","Catalunya","HaMerkaz","Ile-de-France","Ontario","Quebec") 
+#Creating %in% for character matching
+"%in%" <- function(x, table) match(x, table, nomatch = 0) > 0
+
+EnterpriseAI$State =  ifelse((EnterpriseAI$State %in% y),'Non_US','US')
 ```
 
 
