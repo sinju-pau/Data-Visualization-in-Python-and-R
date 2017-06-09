@@ -43,7 +43,16 @@ EnterpriseAI dataset contains 132 rows and 13 columns, with the below column hea
 12. Linkedin Id
 13. Category
 
+The varaibles considered for anlaysis are Total Funding, Year Founded, Exit Status, Location, Employees, Twitter Followers and Category
 
+### Step :3 Data Preprocessing
+
+The dataset contains missing values , unknowns and categorical data. The missing values and unknowns be replaced with appropriate values and categorical data to be encoded.
+```R
+#replacing blanks and 'Unknown's by NA
+EnterpriseAI[EnterpriseAI == ""] <- NA
+EnterpriseAI[EnterpriseAI == "Unknown"] <- NA
+```
 
 
 
