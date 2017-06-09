@@ -161,7 +161,9 @@ For the model , we obtain :
 testMSE <- 0.738789
 cv_Error <- 0.1340996
 ```
-The results are good enough for the model!.
+The results are good enough and promising for the model ! Error rates seem to be considerably lower.
+
+The model being a Linear one, Linear Regression could capture most of its features and could perform predictions with good accuracy.
 
 
 
