@@ -111,6 +111,44 @@ EnterpriseAI$Years_Active <- scale(EnterpriseAIt$Years_Active)
 EnterpriseAI$`Twitter Followers` <- scale(EnterpriseAI$`Twitter Followers`)
 EnterpriseAI$Employees <- scale(EnterpriseAI$Employees)
 ```
+Now split the dataset into training set (80%) and test set (20%) using ```sample.split()``` from caTools package
+```R
+#splitting into training and test sets
+set.seed(99)
+split <- sample.split(EnterpriseAI$`Total Funding`, SplitRatio= 0.8)
+training_set <- subset(EnterpriseAI,split==TRUE)
+test_set <- subset(EnterpriseAI,split==FALSE)
+```
+The dataset EnterpriseAI is now ready for training phase. Let us now begin with Multiple Linear Regression
+
+### Step :3 Machine Learning (Multiple Linear Regression)
+
+We now build a Linear Regressor using the ```glm()``` function with Total Funding as dependent variable to be predicted.
+```R
+#Fitting Multiple Linear Regression to the Training set
+regressor <- glm(formula = `Total Funding` ~ Years_Active + `Twitter Followers` + Employees + State + Category,
+               data = training_set)
+```
+Now lets make predictions on the model just built. 
+```R
+# Predicting the Test set results
+y_pred <- predict(regressor, newdata = test_set)
+summary(regressor) 
+```
+From the summary statistics , we observe that the State and Category have negligible impact on predicting Total Funding, owing to their higher p-values. So we eliminate those variables and re-build the model and make predictions for the final model
+```R
+#Rebuilding model avoiding State and Category
+regressor <- glm(formula = `Total Funding` ~ Years_Active + `Twitter Followers` + Employees ,
+                data = training_set)
+# Predicting the Test set results
+y_pred <- predict(regressor, newdata = test_set)
+summary(regressor)  
+```
+
+
+
+
+
 
 
 
