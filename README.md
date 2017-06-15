@@ -7,7 +7,7 @@ This repository covers my humble analysis of datasets using various regression m
 
 (Note: sometimes GitHub's notebook rendering can be slow or finicky. If you're having trouble with the notebooks, try viewing the material on [nbviewer](http://nbviewer.jupyter.org/)). 
 
-Here's a list of notebooks illustrating my projects in Machine Learning:
+Here's a list of notebooks illustrating my projects:
 
 
 1.  [MoveHub City Rankings Prediction - (Linear Regression and Support Vector Regression)](https://github.com/sinju-pau/Predicting-using-Regression-methods/blob/master/Movehubcityrankings.ipynb)
