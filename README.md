@@ -12,7 +12,7 @@ Here's a list of notebooks illustrating some of my current projects:
 
 1.  [MoveHub City Rankings Prediction - (Linear Regression and Support Vector Regression)](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/Movehubcityrankings.ipynb)
 
-2.  [Energy efficiency Analysis : Heating Load & Cooling Load predictions -(Various regression methods](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/Energyefficiency.ipynb)
+2.  [Energy efficiency Analysis : Heating Load & Cooling Load predictions -(Various regression methods)](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/Energyefficiency.ipynb)
 
 
 
