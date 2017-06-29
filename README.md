@@ -16,5 +16,5 @@ Here's a list of notebooks illustrating some of my current projects:
 
 3.  [Predicting Housing Prices for Boston Cities Data](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/BostonHousing.ipynb) 
 
-4.  [TWA800 Flight Data Recorder : Predicting Pressure on Aircraft](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/TWA800FDR.ipynb) 
+4.  [TWA800 Flight Data Recorder : Predicting Pressure on Aircraft](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression/blob/master/TWA800FDR.ipynb) 
  
