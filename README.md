@@ -14,4 +14,4 @@ Here's a list of notebooks illustrating some of my current projects:
 
 2.  [Energy efficiency Analysis : Heating Load & Cooling Load predictions -(Various regression methods)](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/Energyefficiency.ipynb)
 
-3.  [Predicting Housing Prices for Boston Cities Data](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/Energyefficiency.ipynb) 
+3.  [Predicting Housing Prices for Boston Cities Data](http://nbviewer.jupyter.org/github/sinju-pau/Machine-Learning-Regression-Methods/blob/master/BostonHousing.ipynb) 
