@@ -6,7 +6,7 @@ Data visualization is a general term that describes any effort to help people un
 Here's a list of notebooks illustrating some of my current projects in Python and R:
 
 
-1.  [Data Visualization using Matplotlib library in Python]()
+1.  [Data Visualization using Matplotlib library in Python](http://nbviewer.jupyter.org/github/sinju-pau/Data-Visualization-in-Python-and-R/blob/master/DataVisualizationWithMatplotlib.ipynb)
 
  
  
