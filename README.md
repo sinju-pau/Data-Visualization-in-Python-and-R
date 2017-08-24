@@ -6,7 +6,7 @@ Data visualization is a general term that describes any effort to help people un
 Here's a list of notebooks illustrating some of my current projects in Python and R:
 
 
-1.  [MoveHub City Rankings Prediction - (Linear Regression and Support Vector Regression) - using Python]()
+1.  [Data Visualization using Matplotlib library in Python]()
 
  
  
