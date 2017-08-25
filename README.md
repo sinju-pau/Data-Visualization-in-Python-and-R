@@ -8,7 +8,7 @@ Here's a list of notebooks illustrating some of my current projects on visualiza
 
 1.  [Data Visualization using Matplotlib library in Python](http://nbviewer.jupyter.org/github/sinju-pau/Data-Visualization-in-Python-and-R/blob/master/DataVisualizationWithMatplotlib.ipynb)
 
-2.  [Data Visualization using Seaborn in Python]()
+2.  [Data Visualization using Seaborn in Python](http://nbviewer.jupyter.org/github/sinju-pau/Data-Visualization-in-Python-and-R/blob/master/DataVisualizationInPythonSeaborn.ipynb)
 
  
  
