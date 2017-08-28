@@ -10,6 +10,6 @@ Here's a list of notebooks illustrating some of my current projects on visualiza
 
 2.  [Data Visualization using Seaborn in Python](http://nbviewer.jupyter.org/github/sinju-pau/Data-Visualization-in-Python-and-R/blob/master/DataVisualizationInPythonSeaborn.ipynb)
 
-3.  [Data Visualization using ggplot2 in R]()
+3.  [Data Visualization using ggplot2 in R](https://nbviewer.jupyter.org/github/sinju-pau/Data-Visualization-in-Python-and-R/blob/master/DataVisualizationInR.ipynb)
  
  
